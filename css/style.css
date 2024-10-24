@@ -1,0 +1,199 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #666; /* Light grey for default text */
+}
+
+/* Header Styling */
+header {
+    background: #fff;
+    color: #666;
+    padding: 20px 0;
+    font-size: 0.9em;
+    text-align: right;
+    padding-right: 30px; /* Align the text to the right */
+}
+
+header p {
+    display: inline;
+    margin-left: 20px;
+    font-weight: 300;
+    color: #888; /* Lighter grey for the contact info */
+}
+
+/* Hero Section Styling */
+.hero {
+    background-color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 4em; /* Adjust size for a larger hero text */
+    font-weight: 300; /* Light weight */
+    color: #333; /* Darker color for hero title */
+}
+
+.hero h1 span {
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    display: inline-block;
+    font-weight: 400; /* Slightly heavier for emphasis */
+}
+
+
+/* Styling for content toggle */
+.content-section {
+    display: none;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.portfolio-categories li {
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.portfolio-categories li:hover {
+    text-decoration: underline;
+}
+
+/* Navigation text */
+.nav-text {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+.nav-text p {
+    margin-left: 20px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+
+/* Portfolio Section */
+.portfolio {
+    padding: 50px 10%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2.5em; /* Section title should be slightly bigger */
+    font-weight: 400; /* Light weight to match overall theme */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Category Filter Styling */
+.portfolio-categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.portfolio-categories li {
+    list-style: none;
+    margin: 0 20px;
+    cursor: pointer;
+    font-weight: 300; /* Use lighter weight to match the email text */
+    color: #888; /* Light grey for categories */
+    font-size: 0.9em; /* Match the navigation text size */
+    font-family: 'Roboto', sans-serif; /* Ensure the same font is used */
+}
+
+.portfolio-categories li:hover {
+    text-decoration: underline;
+    color: #000; /* Darker color on hover */
+}
+
+
+/* Portfolio Item Grid */
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* More space between items */
+    padding: 0 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.portfolio-item p {
+    font-size: 1.1em;
+    padding: 15px;
+    font-weight: 300;
+    color: #666;
+}
+
+/* Style for the text under each section */
+.content-section p {
+    font-size: 0.85em; /* Smaller font size */
+    font-weight: 100;
+    color: #666; /* Light grey color */
+    line-height: 1.4; /* Adjust line height to match smaller text */
+    margin-top: 10px; /* Add some spacing at the top */
+}
+
+
+/* Footer Styling */
+footer {
+    background: #f9f9f9;
+    color: #888; /* Lighter grey for footer */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .portfolio-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    header {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    header p {
+        display: block;
+        margin-top: 10px;
+    }
+}

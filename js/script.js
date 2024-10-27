@@ -16,3 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Select all category items
+const categories = document.querySelectorAll('.portfolio-category');
+
+categories.forEach(category => {
+    category.addEventListener('click', () => {
+        // Toggle 'active' class to switch symbol
+        category.classList.toggle('active');
+    });
+});
+

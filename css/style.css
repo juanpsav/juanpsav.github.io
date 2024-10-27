@@ -30,6 +30,38 @@ header p {
     color: #888; /* Lighter grey for the contact info */
 }
 
+header p a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header p a:hover {
+    text-decoration: underline;
+}
+
+.nav-text p {
+    font-size: 0.9em;
+    color: #333;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0; /* Remove left margin */
+}
+
+.nav-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-text .separator {
+    margin: 0 0 0 20px; /* Space around the separator */
+    color: #888;
+    font-weight: normal;
+}
+
+
+
+
 /* Hero Section Styling */
 .hero {
     background-color: #fff;
@@ -51,13 +83,44 @@ header p {
     font-weight: 400; /* Slightly heavier for emphasis */
 }
 
+.hero-picture {
+    width: 100px; /* Adjust based on the desired prominence */
+    height: auto;
+    border-radius: 50%; /* Optional: makes the image circular */
+    margin-bottom: 20px; /* Space between the image and title */
+}
 
-/* Styling for content toggle */
+/* Styling for About Me paragraph*/
+.about-me {
+    padding: 50px 10%;
+    background-color: #fff;
+    text-align: center;
+    color: #333;
+    font-family: 'Lora', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px; /* Space between About Me and Portfolio */
+}
+
+.about-me p {
+    max-width: 900px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the paragraph */
+    font-weight: 300; /* Light font weight to match the site's style */
+    color: #666; /* Grey color for a soft look */
+}
+
+
+
+/* Styling for content toggle with transition */
 .content-section {
     display: none;
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #333;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.content-section.active {
+    display: block;
+    opacity: 1;
 }
 
 .portfolio-categories li {
@@ -67,8 +130,10 @@ header p {
     margin-right: 15px;
 }
 
-.portfolio-categories li:hover {
+.portfolio-categories li:hover,
+.portfolio-categories li.active {
     text-decoration: underline;
+    color: #000; /* Darker color for active or hover */
 }
 
 /* Navigation text */
@@ -83,7 +148,6 @@ header p {
     font-size: 0.9em;
     color: #333;
 }
-
 
 /* Portfolio Section */
 .portfolio {
@@ -115,12 +179,6 @@ header p {
     font-size: 0.9em; /* Match the navigation text size */
     font-family: 'Roboto', sans-serif; /* Ensure the same font is used */
 }
-
-.portfolio-categories li:hover {
-    text-decoration: underline;
-    color: #000; /* Darker color on hover */
-}
-
 
 /* Portfolio Item Grid */
 .portfolio-gallery {
@@ -166,7 +224,6 @@ header p {
     margin-top: 10px; /* Add some spacing at the top */
 }
 
-
 /* Footer Styling */
 footer {
     background: #f9f9f9;
@@ -175,6 +232,7 @@ footer {
     padding: 20px 0;
     font-size: 0.9em;
     margin-top: 50px;
+    border-top: 1px solid #e0e0e0;
 }
 
 /* Responsive Design */

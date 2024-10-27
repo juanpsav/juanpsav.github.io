@@ -1,4 +1,4 @@
-// Inside script.js
+// Updated script.js with transitions and active category highlight
 
 document.addEventListener('DOMContentLoaded', function () {
     const categories = document.querySelectorAll('.portfolio-categories li');
@@ -6,8 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     categories.forEach((category, index) => {
         category.addEventListener('click', () => {
-            sections.forEach((section) => section.style.display = 'none');
-            sections[index].style.display = 'block';
+            // Remove active class from all categories and add to the clicked one
+            categories.forEach(cat => cat.classList.remove('active'));
+            category.classList.add('active');
+
+            // Hide all sections and show the selected one with transition
+            sections.forEach((section) => section.classList.remove('active'));
+            sections[index].classList.add('active');
         });
     });
 });

@@ -47,11 +47,6 @@ body {
 }
 
 
-
-
-
-/* ............ */
-
 /* Body Styling */
 body {
     font-family: 'Roboto', sans-serif;
@@ -86,6 +81,43 @@ header p a:hover {
     text-decoration: underline;
 }
 
+
+
+/* Default styling for nav-text */
+.nav-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Aligns items to the right by default */
+    gap: 10px; /* Space between elements */
+}
+
+/* Individual contact items */
+.nav-text p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 480px) {
+    .nav-text {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items on smaller screens */
+        gap: 5px; /* Reduced gap for compact look */
+    }
+    
+    .nav-text p {
+        font-size: 0.85em; /* Slightly smaller font size on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-text .separator {
+        display: none; /* Hide the vertical bar on mobile */
+    }
+}
+
 .nav-text p {
     font-size: 0.9em;
     color: #333;
@@ -94,11 +126,7 @@ header p a:hover {
     margin: 0; /* Remove left margin */
 }
 
-.nav-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .nav-text .separator {
     margin: 0 0 0 20px; /* Space around the separator */

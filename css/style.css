@@ -5,6 +5,53 @@
     box-sizing: border-box;
 }
 
+
+
+/* Universal styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Desktop styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tablet and below */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+    .portfolio-categories {
+        flex-direction: column;
+    }
+}
+
+/* Mobile and below */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .hero h1 {
+        font-size: 1.5em;
+    }
+}
+
+
+
+
+
+/* ............ */
+
 /* Body Styling */
 body {
     font-family: 'Roboto', sans-serif;
@@ -290,3 +337,4 @@ footer {
         margin-top: 10px;
     }
 }
+

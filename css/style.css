@@ -1,11 +1,9 @@
-/* Basic reset */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
 
 /* Universal styles */
 *, *::before, *::after {
@@ -15,61 +13,33 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #666;
 }
 
-/* Desktop styles */
+/* Container for centered content */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Tablet and below */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2em;
-    }
-    .portfolio-categories {
-        flex-direction: column;
-    }
-}
-
-/* Mobile and below */
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-    .hero h1 {
-        font-size: 1.5em;
-    }
-}
-
-
-/* Body Styling */
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #666; /* Light grey for default text */
-}
-
 /* Header Styling */
 header {
     background: #fff;
     color: #666;
-    padding: 20px 0;
+    padding: 20px 30px;
     font-size: 0.9em;
     text-align: right;
-    padding-right: 30px; /* Align the text to the right */
 }
 
 header p {
     display: inline;
     margin-left: 20px;
     font-weight: 300;
-    color: #888; /* Lighter grey for the contact info */
+    color: #888;
 }
 
 header p a {
@@ -81,74 +51,84 @@ header p a:hover {
     text-decoration: underline;
 }
 
+/* Language Toggle Button */
+.toggle-btn {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    padding: 6px 12px;
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.toggle-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
 
-/* Default styling for nav-text */
+@media (max-width: 768px) {
+    .toggle-btn {
+        top: 10px;
+        right: 20px;
+        padding: 4px 8px;
+        font-size: 0.8em;
+    }
+}
+
+/* Navigation Text */
 .nav-text {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Aligns items to the right by default */
-    gap: 10px; /* Space between elements */
+    justify-content: flex-end;
+    gap: 10px;
 }
 
-/* Individual contact items */
 .nav-text p {
     margin: 0;
     font-size: 0.9em;
     color: #333;
     font-weight: 500;
-}
-
-/* Responsive styling for mobile */
-@media (max-width: 480px) {
-    .nav-text {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: center; /* Center items on smaller screens */
-        gap: 5px; /* Reduced gap for compact look */
-    }
-    
-    .nav-text p {
-        font-size: 0.85em; /* Slightly smaller font size on mobile */
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-text .separator {
-        display: none; /* Hide the vertical bar on mobile */
-    }
-}
-
-.nav-text p {
-    font-size: 0.9em;
-    color: #333;
-    font-weight: 500;
     letter-spacing: 0.5px;
-    margin: 0; /* Remove left margin */
 }
-
-
 
 .nav-text .separator {
-    margin: 0 0 0 20px; /* Space around the separator */
+    margin-left: 20px;
     color: #888;
     font-weight: normal;
 }
 
+@media (max-width: 480px) {
+    .nav-text {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .nav-text p {
+        font-size: 0.85em;
+    }
+    .nav-text .separator {
+        display: none;
+    }
+}
 
-
-
-/* Hero Section Styling */
+/* Hero Section */
 .hero {
     background-color: #fff;
     text-align: center;
-    padding: 100px 0;
-    padding-bottom: 40px; /* Reduce the bottom padding */
+    padding: 100px 0 40px;
 }
 
 .hero h1 {
-    font-size: 4em; /* Adjust size for a larger hero text */
-    font-weight: 300; /* Light weight */
-    color: #333; /* Darker color for hero title */
+    font-size: 4em;
+    font-weight: 300;
+    color: #333;
 }
 
 .hero h1 span {
@@ -156,17 +136,17 @@ header p a:hover {
     color: #fff;
     padding: 5px 10px;
     display: inline-block;
-    font-weight: 400; /* Slightly heavier for emphasis */
+    font-weight: 400;
 }
 
 .hero-picture {
-    width: 100px; /* Adjust based on the desired prominence */
+    width: 100px;
     height: auto;
-    border-radius: 50%; /* Optional: makes the image circular */
-    margin-bottom: 20px; /* Space between the image and title */
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 
-/* Styling for About Me paragraph*/
+/* About Me Section */
 .about-me {
     padding: 50px 10%;
     background-color: #fff;
@@ -175,19 +155,59 @@ header p a:hover {
     font-family: 'Lora', sans-serif;
     font-size: 1.1em;
     line-height: 1.6;
-    margin-bottom: 30px; /* Space between About Me and Portfolio */
+    margin-bottom: 30px;
 }
 
 .about-me p {
-    max-width: 900px; /* Limit width for better readability */
-    margin: 0 auto; /* Center the paragraph */
-    font-weight: 300; /* Light font weight to match the site's style */
-    color: #666; /* Grey color for a soft look */
+    max-width: 900px;
+    margin: 0 auto;
+    font-weight: 300;
+    color: #666;
 }
 
+/* Portfolio Section */
+.portfolio {
+    padding: 50px 10%;
+    background-color: #fff;
+    text-align: center;
+}
 
+.portfolio-categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
 
-/* Styling for content toggle with transition */
+.portfolio-categories li {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 400;
+    color: #888;
+    font-size: 1em;
+    padding: 6px 9px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.portfolio-categories li::before {
+    content: "+";
+    color: #666;
+    margin-right: 5px;
+}
+
+.portfolio-categories li.active::before {
+    content: "-";
+}
+
+.portfolio-categories li:hover,
+.portfolio-categories li.active {
+    text-decoration: underline;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Content Sections */
 .content-section {
     display: none;
     opacity: 0;
@@ -199,145 +219,18 @@ header p a:hover {
     opacity: 1;
 }
 
-.portfolio-categories li {
-    cursor: pointer;
-    font-weight: bold;
-    display: inline-block;
-    margin-right: 15px;
-}
-
-.portfolio-categories li:hover,
-.portfolio-categories li.active {
-    text-decoration: underline;
-    color: #000; /* Darker color for active or hover */
-}
-
-/* Navigation text */
-.nav-text {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 30px;
-}
-
-.nav-text p {
-    margin-left: 20px;
-    font-size: 0.9em;
-    color: #333;
-}
-
-/* Portfolio Section */
-.portfolio {
-    padding: 50px 10%;
-    background-color: #fff;
-    text-align: center;
-}
-
-.portfolio h2 {
-    font-size: 2.5em; /* Section title should be slightly bigger */
-    font-weight: 400; /* Light weight to match overall theme */
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Category Filter Styling */
-.portfolio-categories {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.portfolio-categories li::before {
-    content: " +"; /* Adds an arrow symbol */
-    color: #666; /* Adjust color as needed */
-    font-size: 1em; /* Adjust size if necessary */
-    margin-right: 5px; /* Space between text and arrow */
-}
-
-
-.portfolio-category::before {
-    content: "+";
-    color: #666;
-    font-size: 1em;
-    margin-right: 5px;
-}
-
-.portfolio-category.active::before {
-    content: "-"; /* Change to minus when active */
-}
-
-
-.portfolio-categories li {
-    list-style: none;
-    margin: 0 20px;
-    cursor: pointer;
-    font-weight: 400; /* Use lighter weight to match the email text */
-    color: #888; /* Light grey for categories */
-    font-size: 1.0em; /* Match the navigation text size */
-    padding: 6px 9px; /* Increase padding for a larger clickable area */
-    font-family: 'Roboto', sans-serif; /* Ensure the same font is used */
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.portfolio-categories li:hover {
-    color: #000; /* Darker color on hover */
-    transform: scale(1.05); /* Slightly increases the size */
-}
-
-
-/* Portfolio Item Grid */
-.portfolio-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px; /* More space between items */
-    padding: 0 20px;
-}
-
-.portfolio-item {
-    position: relative;
-    overflow: hidden;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
-
-.portfolio-item:hover img {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-.portfolio-item p {
-    font-size: 1.1em;
-    padding: 15px;
-    font-weight: 300;
-    color: #666;
-}
-
-/* Style for the text under each section */
-
-.content-section {
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
 .content-section p {
-    font-size: 0.85em; /* Smaller font size */
+    font-size: 0.85em;
     font-weight: 100;
-    color: #666; /* Light grey color */
-    line-height: 1.4; /* Adjust line height to match smaller text */
-    margin-top: 10px; /* Add some spacing at the top */
+    color: #666;
+    line-height: 1.4;
+    margin-top: 10px;
 }
 
-/* Footer Styling */
+/* Footer */
 footer {
     background: #f9f9f9;
-    color: #888; /* Lighter grey for footer */
+    color: #888;
     text-align: center;
     padding: 20px 0;
     font-size: 0.9em;
@@ -366,3 +259,11 @@ footer {
     }
 }
 
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5em;
+    }
+    body {
+        padding: 10px;
+    }
+}

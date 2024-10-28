@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap" rel="stylesheet">
-
-
 </head>
 <body>
     <!-- Navigation -->
     <header>
+        <button id="language-toggle" class="toggle-btn">FR</button>
         <div class="nav-text">
             <p>frederique.prince@gmail.com</p>
             <span class="separator">|</span>
@@ -24,47 +23,51 @@
     <!-- Hero Section -->
     <section class="hero">
         <img src="img/fp.jpeg" alt="Profile Picture" class="hero-picture">
-        <h1>Frederique Prince, <span>cpa.</span></h1>
+        <h1 class="text-en">Frederique Prince, <span>cpa.</span></h1>
+        <h1 class="text-fr" style="display: none;">Frederique Prince, <span>cpa.</span></h1>
     </section>    
 
-<!-- About Me Section -->
-<section class="about-me">
-    <p>
-        Frederique Prince is a finance professional whose career exemplifies the power of diverse experiences. Spanning both public and private sectors, her roles—from IT auditing to government finance management and corporate strategy—have given her a unique perspective and adaptability. This background allows Frederique to approach financial challenges holistically, drawing connections across disciplines to create innovative and sustainable financial solutions for organizations.
-    </p>
-</section>
+    <!-- About Me Section -->
+    <section class="about-me">
+        <p class="text-en">Frederique Prince is a finance professional whose career exemplifies the power of diverse experiences. Spanning both public and private sectors, her roles—from IT auditing to government finance management and corporate strategy—have given her a unique perspective and adaptability. This background allows Frederique to approach financial challenges holistically, drawing connections across disciplines to create innovative and sustainable financial solutions for organizations.</p>
+        <p class="text-fr" style="display: none;"> ...</p>
+    </section>
 
     <!-- Portfolio Section -->
     <section class="portfolio">
-        
-        <!-- Categories for filtering -->
         <ul class="portfolio-categories">
-            <li class="portfolio-category">Financial Effectiveness</li>
-            <li class="portfolio-category">Corporate Governance</li>
-            <li class="portfolio-category">Public Service</li>
-            <li class="portfolio-category">Leadership</li>
+            <li class="text-en">Financial Effectiveness</li>
+            <li class="text-fr" style="display: none;">Efficacité Financière</li>
+
+            <li class="text-en">Corporate Governance</li>
+            <li class="text-fr" style="display: none;">Gouvernance d'Entreprise</li>
+
+            <li class="text-en">Public Service</li>
+            <li class="text-fr" style="display: none;">Service Public</li>
+
+            <li class="text-en">Leadership</li>
+            <li class="text-fr" style="display: none;">Leadership</li>
         </ul>
         
         <!-- Content for each category -->
         <div class="content-section" id="Financial Effectiveness">
-            <p>
-                Frederique is committed to building financially resilient organizations by enhancing operational efficiency. She optimizes financial processes to support organizational goals, balancing precision with practical solutions that help teams work smarter. Her focus on efficiency enables organizations to achieve more with agility and lasting impact.
-            </p>
+            <p class="text-en">Frederique is committed to building financially resilient organizations by enhancing operational efficiency. She optimizes financial processes to support organizational goals, balancing precision with practical solutions that help teams work smarter. Her focus on efficiency enables organizations to achieve more with agility and lasting impact.</p>
+            <p class="text-fr" style="display: none;">Frederique s'engage à renforcer la résilience financière des organisations en améliorant l'efficacité opérationnelle...</p>
         </div>
+
         <div class="content-section" id="Corporate Governance">
-            <p>
-                As a Board Member of Yukon Energy, Frederique plays a vital role in overseeing the organization responsible for providing a stable, affordable, and sustainable energy supply to the Yukon Territory. Her experience in corporate governance ensures that decisions are both accountable and aligned with long-term sustainability goals, directly impacting the wellbeing and future of the territory’s residents. Frederique’s governance expertise brings a balance of oversight and innovation to a complex, high-stakes sector.
-            </p>
+            <p class="text-en">As a Board Member of Yukon Energy, Frederique plays a vital role in overseeing the organization responsible for providing a stable, affordable, and sustainable energy supply to the Yukon Territory. Her experience in corporate governance ensures that decisions are both accountable and aligned with long-term sustainability goals, directly impacting the wellbeing and future of the territory’s residents. Frederique’s governance expertise brings a balance of oversight and innovation to a complex, high-stakes sector.</p>
+            <p class="text-fr" style="display: none;">En tant que membre du conseil d'administration de Yukon Energy, Frederique joue un rôle essentiel dans la supervision de l'organisation...</p>
         </div>
+
         <div class="content-section" id="Public Service">
-            <p>
-                In her role as Finance Director at Parks Canada Yukon, Frederique is at the financial helm of initiatives that protect some of Canada’s most remarkable natural landscapes, including Kluane National Park—home to the largest non-polar icefield in the world—and Vuntut National Park, an important migration ground to the renownd Porcupine Caribou herd. Her work ensures that conservation efforts are financially sustainable, balancing budgets and resource allocations to preserve these national treasures for future generations.
-            </p>
+            <p class="text-en">In her role as Finance Director at Parks Canada Yukon, Frederique is at the financial helm of initiatives that protect some of Canada’s most remarkable natural landscapes, including Kluane National Park—home to the largest non-polar icefield in the world—and Vuntut National Park, an important migration ground to the renownd Porcupine Caribou herd. Her work ensures that conservation efforts are financially sustainable, balancing budgets and resource allocations to preserve these national treasures for future generations.</p>
+            <p class="text-fr" style="display: none;">En tant que directrice financière de Parcs Canada Yukon, Frederique est à la tête des initiatives financières qui protègent...</p>
         </div>
+
         <div class="content-section" id="Leadership">
-            <p>
-                Frederique leads with a hands-on approach, working closely with her teams to bring out their best and ensure meaningful results. She’s known for guiding cross-functional teams through complex financial strategies and fostering a collaborative environment where people feel empowered to excel. Her focus on practical, impactful changes helps organizations not only meet but exceed their goals in ways that are both sustainable and people-centered.
-            </p>
+            <p class="text-en">Frederique leads with a hands-on approach, working closely with her teams to bring out their best and ensure meaningful results. She’s known for guiding cross-functional teams through complex financial strategies and fostering a collaborative environment where people feel empowered to excel. Her focus on practical, impactful changes helps organizations not only meet but exceed their goals in ways that are both sustainable and people-centered.</p>
+            <p class="text-fr" style="display: none;">Frederique adopte une approche pratique, travaillant en étroite collaboration avec ses équipes pour tirer le meilleur parti de chacun...</p>
         </div>
     </section>
     
